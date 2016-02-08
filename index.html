@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Kate Rosow Chrisman</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel='shortcut icon' type='image/x-icon' href='favicon.ico' />
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-72x72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-114x114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-144x144-precomposed.png">
+
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:400,700">
+  <link rel="stylesheet" href="css/style-uniform.css">
+
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+  <script src="js/vendor/jquery.hashchange.min.js"></script>
+  <script src="js/vendor/jquery.easytabs.min.js"></script>
+  <script>
+    $(document).ready(function() {
+    	var $logo = $('#logo');
+    	if (location.href.indexOf("#") != -1) {
+    		if(location.href.substr(location.href.indexOf("#"))!='#home'){
+          $logo.show();
+        }
+      }
+
+    	// Show logo
+    	$('#tab-container .tab a').click(function() { $logo.slideDown('slow'); });
+    	$('#home-links .slide-down a').click(function() { $logo.slideDown('slow'); });
+    	// Hide logo
+    	$('#tab-home').click(function() { $logo.slideUp('slow'); });
+
+    	$('#tab-container').easytabs({
+        animate			    : true,
+        updateHash		  : true,
+        transitionIn	  : 'slideDown',
+        transitionOut	  : 'slideUp',
+        animationSpeed	: 600,
+        tabActiveClass	: 'active'
+      }).bind('easytabs:midTransition', function(event, $clicked, $targetPanel){});
+    });
+    function submit_form(){
+      var name = $('#name').val(),
+          email = $('#email').val(),
+          message = $('#message').val();
+      $.post()
+    }
+  </script>
+  <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <script>window.html5 || document.write('<script src="js/vendor/html5shiv.js"><\/script>')</script>
+  <![endif]-->
+</head>
+<body class="bg-fixed bg-1">
+  <div class="main-container">
+    <div class="main wrapper clearfix">
+      <!-- Header Start -->
+      <header id="header">
+        <div id="logo">
+          <h2>Kate Rosow Chrisman</h2>
+          <h4>Freelance Writer</h4>
+        </div>
+      </header>
+      <!-- Header End -->
+      <!-- Main Tab Container -->
+      <div id="tab-container" class="tab-container">
+        <!-- Tab List -->
+        <ul class='etabs'>
+          <li class='tab' id="tab-home">
+            <a href="#home"><i class="fa fa-home"></i><span> Home</span></a>
+          </li>
+          <li class='tab'>
+            <a href="#about"><i class="fa fa-user"></i><span> About Me</span></a>
+          </li>
+          <li class='tab'>
+            <a href="#portfolio"><i class="fa fa-heart"></i><span> Portfolio</span></a>
+          </li>
+          <li class='tab'>
+            <a href="#contact"><i class="fa fa-envelope"></i><span> Contact</span></a>
+          </li>
+        </ul>
+        <!-- End Tab List -->
+        <div id="tab-data-wrap">
+          <!-- About Tab Data -->
+          <div id="home">
+            <section class="clearfix">
+              <div class="g2">
+                <div class="photo">
+                  <img src="images/kate.jpg" alt="Sunny Luthra" width=200px height=200px style="width: 200px; height: 200px;">
+                </div>
+                <div class="info">
+                  <h2>Kate Rosow Chrisman</h2>
+                  <h4>Freelance Writer</h4>
+                  <p></p>
+                </div>
+              </div>
+              <div class="g1">
+                <div id="home-links" class="main-links sidebar">
+                  <ul>
+                    <li class="slide-down"><a href="#about">About Me</a></li>
+                    <li class="slide-down"><a href="#portfolio">My Portfolio</a></li>
+                    <li class="slide-down"><a href="#contact">Hire me for your next project</a></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="break"></div>
+              <div class="contact-info">
+                <div class="g1">
+                  <div class="item-box clearfix">
+                    <i class="icon-facebook"></i>
+                    <div class="item-data">
+                      <h3><a href="http://www.linkedin.com/in/katerosowchrisman" target="_blank">katerosowchrisman</a></h3>
+                      <p>LinkedIn Profile</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="g1">
+                  <div class="item-box clearfix">
+                    <i class="icon-twitter"></i>
+                    <div class="item-data">
+                      <h3><a href="https://twitter.com/KateRChrisman" target="_blank">@KateRChrisman</a></h3>
+                      <p>Twitter Handle</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section><!-- content -->
+          </div>
+          <!-- End About Tab Data -->
+          <!-- Resume Tab Data -->
+          <div id="about">
+            <section class="clearfix">
+              <div class="center">
+                <h3>About Me</h3>
+                <p>I am a freelance writer & editor based out of Oakland/San Francisco.  I write on the environment, energy, business, technology and finance. I spent over seven years in Greater China, with four of those years covering energy & the environment from Beijing. I was the media coordinator for a non-profit in DC that promoted the use of social and environmental criteria in investment decisions. </p>
+                <p>I’ve written extensively on China’s burgeoning energy and environmental sectors.  </p>
+                <p>I was the researcher for Jeremy Haft’s book “All the Tea in China.”</p>
+                <p>In late 2012, I left my day job, bought a bike and cycled from Chengdu, China through Laos and Thailand. You can see my adventures at <a href="http://www.biking2paradise.com/" target="blank"> Biking2Paradise</a>.</p>
+                <p>Originally from Minnesota, I’ve lived in Washington, DC, Denver, London, Seattle, Beijing, Shanghai, Taipei, and Singapore. </p>
+                <h3>Education</h3>
+                <p>I hold a master’s degree in public policy from the London School of Economics and a bachelor’s degree from Colorado College. I’ve studied Chinese at National Taiwan University in Taipei (ICLP), Fudan University in Shanghai and Nankai University in Tianjin. </p>
+              </div>
+            </section>
+          </div>
+          <!-- End Resume Tab Data -->
+          <!-- Portfolio Tab Data -->
+          <div id="portfolio">
+            <section class="clearfix">
+              <div class="g1">
+                <div class="item-box clearfix">
+                <h3>Energy</h3>
+                <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/cofracking.jpg" alt="shale gas fracking site" ></div><div><a href="http://breakingenergy.com/2014/05/07/in-colorado-local-fracking-debate-holds-national-implications/">In Colorado, Local Fracking Debate Holds National Implications</a></div></div>
+                <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/myanmar3.jpg" alt="development" ></div><div><a href="http://breakingenergy.com/2014/03/27/powering-myanmar-fdi-geopolitics-and-the-appetite-for-risk/">Powering Myanmar: FDI, Geopolitics and the Appetite for Risk (Part III)</a></div></div>
+                <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/myanmar2.jpg" alt="development" ></div><div><a href="http://breakingenergy.com/2014/03/20/powering-myanmar-investors-watch-closely-as-government-cautiously-cuts-subsidies/">Powering Myanmar: Investors Watch Closely as Government Cautiously Cuts Subsidies (Part II)</a></div></div>
+                <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/myanmar1.jpg" alt="development" ></div><div><a href="http://breakingenergy.com/2014/03/18/powering-myanmar-the-tricky-tale-of-natural-gas-hydro-protests-and-foreign-investment/">Powering Myanmar: The Tricky Tale of Natural Gas, Hydro, Protests and Foreign Investment (Part I)</a></div></div>
+                <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/chinagasolinecosts.jpg" alt="oil refinery" ></div><div><a href="http://breakingenergy.com/2014/02/19/with-rising-gasoline-demand-beijing-plans-to-pass-on-costs-to-consumers/" target="_blank">With Rising Gasoline Demand, Beijing Plans to Pass on Costs to Consumers</a></div></div>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h3>Environment</h3>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/climatebikers.jpg" alt="Kate on a roof installing solar" ></div><div><a href="http://breakingenergy.com/2014/11/07/the-climate-riders/">The Climate Riders &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/kateonroof.jpg" alt="Kate on a roof installing solar" ></div><div><a href="http://breakingenergy.com/2014/10/22/the-great-social-solar-divide/">The Great Social Solar Divide &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/balancesheet.jpg" alt="fossil fuels" ></div><div><a href="http://breakingenergy.com/2014/07/31/not-on-my-balance-sheet-climate-change-fossil-fuels-and-stranded-assets/">Not on My Balance Sheet: Climate Change, Fossil Fuels and Stranded Assets</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/emissionsinchina.jpg" alt="emissions in China" ></div><div><a href="http://breakingenergy.com/2014/05/27/emissions-markets-with-chinese-characteristics-or-how-transparency-is-key/">Emissions Markets with Chinese Characteristics, or how Transparency is Key</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/chinesekwh.jpg" alt="electricity in China" ></div><div><a href="http://breakingenergy.com/2014/02/27/in-a-chinese-kilowatt-hour-the-link-between-pollution-gdp-and-power/" target="_blank">In a Chinese Kilowatt-hour: The Link Between Pollution, GDP and Power</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/3thingstowatch.jpg" alt="china fireworks" ></div><div><a href="http://breakingenergy.com/2014/02/12/chinas-environment-in-the-year-of-the-horse-3-things-to-watch-in-2014/" target="_blank">China’s Environment in the Year of the Horse: 3 Things to Watch in 2014</a></div></div>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h3>Business</h3>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/library.jpg" alt="library books" ></div><div><a href="http://www.consumereagle.com/2014/04/07/the-rise-of-e-books-and-a-shrinking-library-catalog/">The Rise of E-Books and a Shrinking Library Catalog</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/muckercapital.jpg" alt="cut up dollar" ></div><div><a href="http://www.builtinla.com/blog/mucker-capital">From the 'short end of the stick' to fully-funded: the new $20 Mucker Capital fund is changing LA tech</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/patenttrolls.jpg" alt="the law" ></div><div><a href="http://www.builtinchicago.org/blog/patent-trolls">How patent trolls stifle innovation at Chicago tech companies</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/generalassembly.jpg" alt="general assembly logo" ></div><div><a href="http://www.builtinla.com/blog/general-assembly-35-million-funding">With a $35 million boost, General Assembly builds up its global network</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/signpost.jpeg" alt="staff at signpost" ></div><div><a href="http://www.builtincolorado.com/blog/signpost" target="_blank">After opening up shop in Denver just last year, Signpost plans to triple its Colorado employee base</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/healthcarehands.jpg" alt="sick woman" ></div><div><a href="http://www.builtincolorado.com/blog/colorado-healthcare-profile">These 3 Colorado startups are putting healthcare in your hands</a></div></div>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h3>China</h3>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/chinaslowdown.jpg" alt="china slowdown" ></div><div><a href="http://breakingenergy.com/2014/07/17/a-shift-and-a-slowdown-a-look-behind-chinas-1h-oil-and-gas-data/">A Shift and a Slowdown: A Look Behind China’s 1H Oil and Gas Data</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/shale gas photo.jpg" alt="shale gas site" ></div><div><a href="http://breakingenergy.com/2014/04/09/shale-gas-blooms-in-china-not-so-fast/">Shale Gas Blooms in China? Not So Fast</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/chinatealeaves.jpg" alt="shale gas fracking site" ></div><div><a href="http://breakingenergy.com/2014/04/03/reading-the-tea-leaves-chinese-national-oil-companies-diverging-strategies/">Reading the Tea Leaves: Chinese National Oil Companies’ Diverging Strategies</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/chinanukes.jpg" alt="china nuclear plant" ></div><div><a href="http://breakingenergy.com/2014/03/11/going-big-at-home-and-abroad-chinas-nuclear-ambitions/" target="_blank">Going Big At Home and Abroad: China’s Nuclear Ambitions</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/chinaunconventional.jpg" alt="shale gas fracking site" ></div><div><a href="http://breakingenergy.com/2014/02/04/chinas-ambitions-to-double-output-by-2030-rely-on-unconventional-sources/" target="_blank">China’s Ambitions to Double Output by 2030 Rely on Unconventional Sources</a></div></div>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h3>Technology</h3>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/womenwhocode.jpg" alt="female coder" ></div><div><br><a href="http://www.builtincolorado.com/blog/amazing-women-developers-colorado">Women Who Code</a><br></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/procuredhealth.jpg" alt="doctors stuff" ></div><div><a href="http://www.builtinchicago.org/blog/procured-health">How a $4 million round for Procured Health will fix hospitals' profit problems</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/wellspring.jpg" alt="wellspring website" ></div><div><a href="http://www.builtinchicago.org/blog/5-million-funding-wellspring-wants-help-manage-your-innovation" target="_blank">With $5 million in funding, Wellspring wants to help manage your innovation</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/raptmedia.jpg" alt="rapt media team" ></div><div><a href="http://www.builtincolorado.com/blog/rapt-media-mission-radically-change-online-videos" target="_blank">Rapt Media on a mission to radically change online videos</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/tradeya.jpg" alt="tradeya founders" ></div><div><a href="http://www.builtinla.com/blog/month-after-launch-bartering-platform-tradeya-goes-mobile-and-doubles-user-base" target="_blank">A month after launch, bartering platform TradeYa goes mobile and doubles user base</a></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/tapiture.png" alt="tapiture screen grap" ></div><div><a href="http://www.builtinla.com/blog/225-million-boost-tapiture-taps-potential-content-and-e-commerce-alike" target="_blank">With a $2.25 million boost, Tapiture taps into content and e-commerce alike</a></div></div>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h4>Social Innovation</h4>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/wheelchair.jpg" alt="female coder" ></div><div><br><a href="http://www.builtinchicago.org/blog/roll-me-makes-chicago-accessible-handicapped">How an app is making Chicago accessible for the handicapped</a><br></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/jail.png" alt="female coder" ></div><div><br><a href="http://www.builtinchicago.org/blog/chicago-tech-company-enters-prison-system">How Chicago's Jail Education Solutions is helping reform the prison system with tablets</a><br></div></div>
+                  <div class="portfolio-item"><div class="portfolio-item-image"><img src="images/robots.jpg" alt="female coder" ></div><div><br><a href="http://www.builtincolorado.com/blog/magic-robots-robauto-and-autism">How Robauto's robots are helping the autistic</a><br></div></div>
+                  <p>&nbsp</p>
+                  <p>&nbsp</p>
+                  <p>&nbsp</p>
+                  <p>&nbsp</p>
+                  <p>&nbsp</p>
+                  <p>&nbsp</p>
+                  <p>&nbsp</p>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h3>Visuals</h3>
+                  <p><a href="http://breakingenergy.com/2014/04/16/plotting-chinas-air-quality-the-good-the-bad-the-un-breathable/">Infographic: Plotting China’s Air Quality: The Good, The Bad, The Un-Breathable<img src="images/China-Air.jpg" alt="historical graph of China's air quality" ></a></p>
+                  <p><a href="http://breakingenergy.com/2014/02/21/infographic-the-energy-olympics/" target="_blank">Infographic: The Energy Olympics<img src="images/energyolympics.jpg" alt="infographic of Energy Olympics" ></a></p>
+                </div>
+              </div>
+              <div class="g1">
+                <div class="item-box clearfix">
+                  <h3>Pre-2014 Articles</h3>
+                  <p> The following small selection of articles are all behind a paywall. </p>
+                  <p>China hits new oil demand growth</p>
+                  <p>China shale gas require western partnerships</p>
+                  <p>Clause and Effect, (editorial on China's uneven implementation of WTO requirements for oil and gas)</p>
+                  <p>CNOOC bids high for Nexen</p>
+                  <p>Conventional gasoline demand growth to slow</p>
+                  <p>Import deals raise prospect of Chinese surplus</p>
+                  <p>Oil firms tweak growth strategy</p>
+                  <p>China sets up oil spill fund</p>
+                  <p>Doubts emerge of nuclear target</p>
+                  <p>Analysis – Financial brake on China oil firms</p>
+                  <p>China makes progress on energy intensity targets</p>
+                  <p>Guangdong launches pilot emissions trading scheme</p>
+                  <p>Questions raised over China unconventional gas sector</p>
+                  <p>Shenzhen CO2 scheme to start trading in 2013</p>
+                </div>
+              </div>
+            </section>
+          </div>
+          <!-- End Portfolio Data -->
+          <!-- Contact Tab Data -->
+          <div id="contact">
+            <section class="clearfix">
+              <div class="TTWForm-container">
+                <div id="form-title" class="form-title field">
+                  <h3 class="center-text">Contact Me!</h3>
+                </div>
+                <form id="contact-us" action="https://zapier.com/hooks/catch/2hsrvl/" class="TTWForm center" method="post" >
+                  <div id="field1-container" class="field f_100">
+                    <input type="text" name="name" id="name" value="" required="required" class="txt requiredField" placeholder="Name">
+                  </div>
+                  <div id="field2-container" class="field f_100">
+                    <input type="email" name="email" id="email" value="" class="txt requiredField email" required="required" placeholder="Email Address">
+                  </div>
+                  <div id="field4-container" class="field f_100">
+                    <textarea name="comments" id="message" required="required" class="txt requiredField" placeholder="Message"></textarea>
+                  </div>
+                  <div id="form-submit" class="field f_100 clearfix submit">
+                    <input type="submit" value="Submit" onclick="submit_form()">
+                  </div>
+                </form>
+              </div>
+              <div class="break"></div>
+            </section>
+          </div>
+          <!-- End Contact Data -->
+        </div>
+      </div>
+      <!-- End Tab Container -->
+      <footer></footer>
+    </div>
+  </div>
+</body>
