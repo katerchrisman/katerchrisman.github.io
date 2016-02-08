@@ -49,23 +49,35 @@
         tabActiveClass	: 'active'
       }).bind('easytabs:midTransition', function(event, $clicked, $targetPanel){});
 
+      $('#form-result').hide();
+      $('.success').hide();
+      $('.fail').hide();
       $("#contact-us").submit(function(e) {
         e.preventDefault();
-        // var name = $('#name').val(),
-        //     email = $('#email').val(),
-        //     message = $('#message').val(),
         var url = "https://zapier.com/hooks/catch/2hsrvl/";
         $.ajax({
           type: "POST",
           url: url,
           data: $("#contact-us").serialize(),
           success: function(data) {
+            $('#form-title').hide();
+            $('#contact-us').hide();
+            if (data.status === "success") {
+              $('.success').show();
+            } else {
+              $('.fail').show();
+            }
+            $('#form-result').show();
             console.log(data);
           }
         });
       });
     });
-
+    function reset_form() {
+      $('#contact-us').trigger('reset');
+      $('#form-result').hide();
+      $('#form-title').show();
+    }
   </script>
   <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -283,12 +295,14 @@
                     <textarea name="comments" id="message" required="required" class="txt requiredField" placeholder="Message"></textarea>
                   </div>
                   <div id="form-submit" class="field f_100 clearfix submit">
-                    <input type="submit" value="Submit" onclick="submit_form()">
+                    <input type="submit" value="Submit">
                   </div>
                 </form>
               </div>
-              <div id="form_result">
-
+              <div id="form-result">
+                <p class="success">Thank you. Your message has been submitted.</p>
+                <p class="fail">There was a problem submitting your message.</p>
+                <button type="button" onclick="reset_form()">Reset</button>
               </div>
               <div class="break"></div>
             </section>
