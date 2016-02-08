@@ -1,12 +1,12 @@
 /** Basic Styling **/
 
-@media only screen and (min-width: 320px) { 
+@media only screen and (min-width: 320px) {
 	.TTWForm{
 		width: 300px;
 	}
 }
 
-@media only screen and (min-width: 600px) { 
+@media only screen and (min-width: 600px) {
 	.TTWForm{
 		width: 500px;
 	}
@@ -28,15 +28,15 @@
 }
 
 .TTWForm-container h3 {
-	font-size: 2.25em; 
-	line-height: 1.3333333333333333333333333333333em; 
+	font-size: 2.25em;
+	line-height: 1.3333333333333333333333333333333em;
     margin-bottom: 0;
 }
 
 
 /** Field Styles **/
 .TTWForm .field, #form-title.field {
-/* 
+/*
     padding-bottom: 6px;
     padding-top: 6px;
  */
@@ -114,7 +114,8 @@
     font: 16px/24px Helvetica Neue, "Arial", Helvetica, Verdana, sans-serif;
 }
 
-.TTWForm .submit input {
+.TTWForm .submit input,
+.button button {
     text-align: center;
     font-size: 14px;
     text-decoration: none;
@@ -142,7 +143,7 @@
 }
 
 
-/* 
+/*
 #form-title {
     padding: 12px;
 }
